@@ -1,0 +1,12 @@
+
+$(document).ready(function(){
+  $("#metrics").hide;
+});
+    
+$(document).ready(function()
+{
+    $("button").click(function()
+    {
+      this.hide();
+    });
+  });

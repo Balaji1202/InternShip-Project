@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Convert JSON Data to HTML Table</title>
+    <script src="jsonDataToTable.js"></script>
+    <style>
+        table, th, td 
+        {
+            border: solid 1px #DDD;
+            border-collapse: collapse;
+            padding: 2px 3px;
+            text-align: center;
+        }
+        th {
+            font-weight:bold;
+            /* position: fixed; */
+        }
+    </style>
+</head>
+<body>
+        <script>
+            $('window').ready(function(){
+                CreateTableFromJSON();
+            });
+        </script>
+         <h3 style="padding-left:250px; padding-bottom: 20px">
+                Search your desired book from our library
+            </h3>
+    <div class="container" style="padding-bottom: 10px">
+        <div class="row" style="padding-left: 180px">
+            <div class="col-3">
+                <label for="searchBy">Search By:</label>
+                <select id="searchBy">
+                    <option value="isbn">search...</option>
+                    <option value="isbn">ISBN</option>
+                    <option value="bname">Book Name</option>
+                    <option value="domain">Domain</option>
+                    <option value="author">Author</option>
+                </select>
+            </div>
+            <div class="col-6">
+                <label for="searchText">Enter search text here:</label>
+                <input type="text" id="myInput">
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <table class="table" style="table-layout:fixed; border: black solid 2px">
+            <thead>
+                <!-- <col width="103px">
+                <col width="103px">
+                <col width="103px">
+                <col width="103px">
+                <col width="103px">
+                <col width="103px">
+                <col width="103px"> -->
+                <tr>
+                    <th>ISBN</th>
+                    <th>BOOK NAME</th>
+                    <th>DOMAIN</th>
+                    <th>AUTHOR</th>
+                    <th>PUBLICATIONS</th>
+                    <th>DATE OF PUBLICATIONS</th>
+                    <th>PRICE</th>
+                </tr>
+            </thead>
+        </table>
+        <div style= "max-height: 500px; overflow:auto;" id="showData"></div>
+    </div>
+</body>
+</html>

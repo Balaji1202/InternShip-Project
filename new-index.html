@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="icon" href="http://chiroloop.com/wp-content/uploads/2015/12/zoho-logo.png">
+        <link rel="stylesheet"
+                    href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+        <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' >
+        <link rel="stylesheet" href="newstyle.css"></link>
+        <title>ZLibrary</title>
+    </head>
+
+    <body>
+        <div class="container-fluid">
+            
+            <!-- Main header -->
+                <div class="jumbotron text-center">
+                    <div class="row">
+                        <div class="col-1">
+                            <img src= "images/zoho-logo.png" width="130px" height="70px" alt="zoho-logo">
+                        </div>
+                        <div class="col-10">
+                            <h1>ZOHO LIBRARY</h1>
+                            <p>An online portal to access the entire library!</p> 
+                        </div>
+                        <div class="col-1">
+                            <img src="images/img_avatar.png" style="border-radius:50%" alt="profilepic" width="60px" height="85px">
+                        </div>
+                    </div>
+                </div> 
+            
+            <!-- Navigation header -->
+                <div class="container-fluid header card" id="myHeader" style="z-index: 1">
+                    <nav class="row navbar navbar-expand-lg navbar-light bg-light" style="position:relative; z-index: 1;">
+                        <li>&nbsp</li><li>&nbsp</li><li>&nbsp</li>
+                        <a class="navbar-brand" href="#">Zoho</a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                        </button>
+                        
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav mr-auto">
+                                <li>&nbsp</li><li>&nbsp</li><li>&nbsp</li><li>&nbsp</li><li>&nbsp</li><li>&nbsp</li>
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                                </li>
+                                <li>&nbsp</li><li>&nbsp</li><li>&nbsp</li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#"></a>
+                                </li>
+                                <li>&nbsp</li><li>&nbsp</li><li>&nbsp</li>
+                                <li class="nav-item">
+                                    <a class="nav-link disabled" href="#">Add a book(Admin only)</a>
+                                </li>
+                                <li>&nbsp</li><li>&nbsp</li><li>&nbsp</li>
+                                <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            Browse by
+                                        </a>
+                                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                            <a class="dropdown-item" href="#">Author Name</a>
+                                            <a class="dropdown-item" href="#">Publisher Name</a>
+                                            <a class="dropdown-item" href="#">Book Name</a>
+                                            <a class="dropdown-item" href="#">ISBN</a>
+                                        </div>
+                                </li>
+                                <li>&nbsp</li><li>&nbsp</li><li>&nbsp</li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Contact</a>
+                                </li>
+                                <li>&nbsp</li><li>&nbsp</li><li>&nbsp</li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Help and support</a>
+                                </li>
+                                <li>&nbsp</li><li>&nbsp</li><li>&nbsp</li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Feedback</a>
+                                </li>
+                            </ul>
+                            <form class="form-inline my-2 my-lg-0">
+                            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search a book</button>
+                            </form>
+                        </div>
+                    </nav>
+                </div>
+
+            <!-- sidebar and content row -->
+            <div class="row">
+                <!-- Sidebar -->
+                <div class="col-2" id="sidebarFunction" style="border-right: black solid 1px">
+                    <div id="wrapper">
+                        <div id="sidebar-wrapper">
+                            <ul class="sidebar-nav">
+                                <li id="home" class="sidebar-brand">
+                                    <a id="maincontent" href="#">
+                                        <div class="row active" id="maincontent">
+                                            <i class="fab fa-yelp col-2" style="font-size: 45px"></i>
+                                            <div class="col-10"><strong>ZLibrary</strong></div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div id="metrics" class="row">
+                                            <i class="fas fa-life-ring col-2" style=" padding-top: 13px"></i>
+                                            <div class="col-10">Dashboard</div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="row" id="book">
+                                            <i class="fas fa-book col-2" style=" padding-top: 13px"></i>
+                                            <div class="col-10">Books</div>
+                                        </div>
+                                    </a>
+                                </li>
+
+                                <!-- book sidebar submenu -->
+                                <div id="book-submenu" class="submenu-hide">
+                                    <li>
+                                        <a href="#" >
+                                            <div class="row" id="addBook">
+                                                <i class="fas fa-book col-2" style=" padding-top: 13px"></i>
+                                                <div class="col-10">Add</div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" >
+                                            <div class="row" id = "searchBook">
+                                                <i class="fas fa-book col-2" style=" padding-top: 13px"></i>
+                                                <div class="col-10">Search</div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" >
+                                            <div class="row" id="deleteBook">
+                                                <i class="fas fa-book col-2" style=" padding-top: 13px"></i>
+                                                <div class="col-10">Delete</div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" >
+                                            <div class="row" id="lendBook">
+                                                <i class="fas fa-book col-2" style=" padding-top: 13px"></i>
+                                                <div class="col-10">Lend</div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    
+                                    <li>
+                                        <a href="#" >
+                                            <div class="row" id="returnBook">
+                                                <i class="fas fa-book col-2" style=" padding-top: 13px"></i>
+                                                <div class="col-10">Return</div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </div>
+                                <!-- End of book sidebar submenu -->
+
+                                <li>
+                                    <a href="#" >
+                                        <div class="row" id="login">
+                                            <i class="fas fa-map-signs col-2" style=" padding-top: 13px"></i>
+                                            <div class="col-10">Login</div>
+                                        </div>
+                                    </a>
+                                </li>
+
+                                <!-- login sidebar submenu -->
+                                <div id="login-submenu" class="submenu-hide">
+                                    <li>
+                                        <a href="#" >
+                                            <div class="row" id="admin">
+                                                <i class="fas fa-map-signs col-2" style=" padding-top: 13px"></i>
+                                                <div class="col-10">Admin</div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" >
+                                            <div class="row" id="user">
+                                                <i class="fas fa-map-signs col-2" style=" padding-top: 13px"></i>
+                                                <div class="col-10">User</div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </div>
+                                <!-- End of login sidebar submenu -->
+
+
+                                <li>
+                                    <a href="#" >
+                                        <div class="row" id="abt">
+                                            <i class="fas fa-newspaper col-2" style=" padding-top: 13px"></i>
+                                            <div class="col-10">About</div>
+                                        </div>
+                                    </a>
+                                </li>
+
+                                <!-- sidebar submenu -->
+                                <div id="abt-submenu" class="submenu-hide">
+                                    <li>
+                                        <a href="#" >
+                                            <div class="row">
+                                                <i class="fas fa-newspaper col-2" style=" padding-top: 13px"></i>
+                                                <div class="col-10">Zoho</div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" >
+                                            <div class="row">
+                                                <i class="fas fa-newspaper col-2" style=" padding-top: 13px"></i>
+                                                <div class="col-10">Developers</div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </div>
+                                <!-- End of sidebar submenu -->
+
+
+                                <li>
+                                    <a href="#">
+                                        <div class="row">
+                                            <i class="far fa-newspaper col-2" style=" padding-top: 13px"></i>
+                                            <div class="col-10">Calendar</div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="row">
+                                            <i class="fas fa-suitcase col-2" style=" padding-top: 13px"></i>
+                                            <div class="col-10">Charts</div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="row">
+                                            <i class="fas fa-map col-2" style=" padding-top: 13px"></i>
+                                            <div class="col-10">Maps</div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="row">
+                                            <i class="fas fa-briefcase col-2" style=" padding-top: 13px"></i>
+                                            <div class="col-10">Admin UI</div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="row">
+                                            <i class="fas fa-binoculars col-2" style=" padding-top: 13px" ></i>
+                                            <div class="col-10">Extras</div>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class= "col-10" id="content" style="padding-top: 40px">
+                <!-- Space for dynamically loading  Content-->
+                </div>
+                
+            <!-- End of sidebar and content row -->
+
+        </div>
+
+        <script src="newjavascript.js"></script>
+
+    </body>
+</html>

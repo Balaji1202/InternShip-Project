@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <h3 style="padding-left:250px; padding-bottom: 20px">
+        Search your desired book from our library
+    </h3>
+    <div class="container" style="padding-bottom: 10px;">
+        <div class="row">
+            <div class="col-2">
+                <label for="isbn">ISBN:</label>
+                <input type="text" id="isbn">
+            </div>
+            <div class="col-2">
+                <label for="bname" >Book Name:</label>
+                <input type="text" autocomplete="new-password" list="dataList" autocomplete="false" id="bname">
+                <datalist id="dataList">
+                </datalist>
+            </div>
+            <div class="col-2">
+                <label for="domain">Domain:</label>
+                <input type="text" id="domain">
+            </div>
+            <div class="col-2">
+                <label for="aname">Author Name:</label>
+                <input type="text" id="aname">
+            </div>
+            <div class="col-2">
+                <label for="publ">Publications:</label>
+                <input type="text" id="publ">
+            </div>
+            <div class="col-2">
+                <label for="price">Price:($)</label>
+                <input type="number" id="price" placeholder="Lower Range">
+            </div>
+        </div>
+        <div class="row">
+            <div style="margin-left:40%; padding-top: 20px">
+                <button class="btn btn-primary" id="searchButton"><i style="padding-right: 10px" class="fa fa-search"></i>Search</button>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <table id="tableHead" class="table" style="table-layout:fixed; display: none; margin-bottom: 0px">
+            <thead>
+                <tr style="background:#DCDCDC; border: 2px black solid">
+                    <th>ISBN</th>
+                    <th>BOOK NAME</th>
+                    <th>DOMAIN</th>
+                    <th>AUTHOR</th>
+                    <th>PUBLICATIONS</th>
+                    <th>DATE OF PUBLICATIONS</th>
+                    <th>PRICE</th>
+                </tr>
+            </thead>
+        </table>
+        <div id="beforeSearch">
+            <h2 style="padding: 40px;margin-left: 280px" id="searchQueryText" >Give me a search query!</h2>
+            <img style="margin-left: 380px" src="../images/waiting.gif" width="200px" height="300px" alt="search gif">
+        </div>
+        <div style= "max-height: 500px; overflow:auto;" id="showData"></div>
+    </div>
+    <script src="../js/searchBook.js"></script>
+</body>
+</html>
